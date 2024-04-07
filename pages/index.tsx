@@ -17,7 +17,7 @@ import ScreenSizeDetector from "../components/CustomComponents/ScreenSizeDetecto
 import Maintenance from "../components/Home/Maintenance/Maintenance";
 export default function Home() {
   const [ShowElement, setShowElement] = useState(false);
-  const [ShowThisCantBeReached, setShowThisCantBeReached] = useState(true);
+  // const [ShowThisCantBeReached, setShowThisCantBeReached] = useState(true);
   const [ShowMe, setShowMe] = useState(false);
   // context Variable to clearInterval
   const context = useContext(AppContext);
@@ -87,11 +87,11 @@ export default function Home() {
     }
     setTimeout(() => {
       setShowElement(true);
-    }, 4500);
+    }, 500);
 
-    setTimeout(() => {
-      setShowThisCantBeReached(false);
-    }, 5400);
+    // setTimeout(() => {
+    //   setShowThisCantBeReached(false);
+    // }, 5400);
     // ? INFORMATIONAL next function will show the component after changing the state of ShowMe
     setTimeout(() => {
       setShowElement(false);
@@ -107,7 +107,7 @@ export default function Home() {
 
   console.log("website is rendering...");
   const meta = {
-    title: "Abdellatif Anaflous - Software Engineer",
+    title: "Muhammad Osama- Software Engineer",
     description: `I've been working on Software development for 5 years straight. Get in touch with me to know more.`,
     image: "/titofCercle.png",
     type: "website",
@@ -120,23 +120,23 @@ export default function Home() {
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
-        <meta property="og:url" content={`https://anaflous.com`} />
-        <link rel="canonical" href={`https://anaflous.com`} />
+        <meta property="og:url" content={`https://muhammadosama.netlify.app/`} />
+        <link rel="canonical" href={`https://muhammadosama.netlify.app/`} />
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Manu Arora" />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@titofabdo" />
-        <meta name="twitter:title" content={meta.title} />
-        <meta name="twitter:description" content={meta.description} />
-        <meta name="twitter:image" content={meta.image} />
+        {/* <meta name="twitter:card" content="summary_large_image" /> */}
+        {/* <meta name="twitter:site" content="@titofabdo" /> */}
+        {/* <meta name="twitter:title" content={meta.title} /> */}
+        {/* <meta name="twitter:description" content={meta.description} /> */}
+        {/* <meta name="twitter:image" content={meta.image} /> */}
       </Head>
 
       {!isBlackListed ? (
         <div className="relative snap-mandatory min-h-screen bg-AAprimary w-full ">
-          {context.sharedState.finishedLoading ? <></> : ShowThisCantBeReached ? <ThisCantBeReached /> : <></>}
+          {/* {context.sharedState.finishedLoading ? <></> : ShowThisCantBeReached ? <ThisCantBeReached /> : <></>} */}
           {context.sharedState.finishedLoading ? <></> : ShowElement ? <Startup /> : <></>}
           <Header finishedLoading={context.sharedState.finishedLoading} sectionsRef={homeRef} />
           <MyName finishedLoading={context.sharedState.finishedLoading} />
@@ -146,7 +146,7 @@ export default function Home() {
           {context.sharedState.finishedLoading ? <SomethingIveBuilt /> : <></>}
           {context.sharedState.finishedLoading ? <GetInTouch /> : <></>}
           {context.sharedState.finishedLoading ? (
-            <Footer githubUrl={"https://github.com/hktitof/my-website"} hideSocialsInDesktop={true} />
+            <Footer githubUrl={"https://github.com/usamahafiz8"} hideSocialsInDesktop={true} />
           ) : (
             <></>
           )}
