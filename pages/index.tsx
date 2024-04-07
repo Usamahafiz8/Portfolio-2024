@@ -87,7 +87,7 @@ export default function Home() {
     }
     setTimeout(() => {
       setShowElement(true);
-    }, 500);
+    }, 4500);
 
     // setTimeout(() => {
     //   setShowThisCantBeReached(false);
