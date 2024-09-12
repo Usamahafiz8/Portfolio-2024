@@ -28,25 +28,15 @@ export default function SomethingIveBuilt() {
       </div>
 
       <div className="flex flex-col   xl:space-y-36 space-y-8 md:space-y-28">
-        {/* // ?  Project  1*/}
         <div data-aos="fade-up" className="relative md:grid md:grid-cols-12 w-full md:h-96 ">
-          {/* Left image */}
           <div
             className="hidden bg-AAprimary z-10  py-4 
           absolute md:grid grid-cols-12 w-full h-full  content-center"
           >
             <div className="relative rounded w-full h-full col-span-7 ">
-              {/* <Link href={"/typing"}>
-                <div
-                  // onClick={}
-                  className="absolute w-full h-full rounded bg-AAsecondary 
-           transition-opacity opacity-20 hover:opacity-0 hover:cursor-pointer duration-300"
-                ></div>
-              </Link> */}
 
               <a href="https://www.ens.vision" target={"_blank"} rel="noreferrer">
                 <div
-                  // onClick={}
                   className="absolute w-full h-full rounded bg-AAprimary 
            transition-opacity opacity-30 hover:opacity-0 hover:cursor-pointer duration-300"
                 ></div>
